@@ -1,0 +1,4 @@
+.header {
+  background-color: color($mainBlue a(55%));
+  height: 2rem;
+}
