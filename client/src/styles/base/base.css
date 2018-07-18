@@ -1,0 +1,18 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ */
+html { box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; /* html is set to 62.5% so that all the REM measurements throughout  are based on 10px sizing. So basically 1.5rem = 15px :) */
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+}
