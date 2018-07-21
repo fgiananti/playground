@@ -1,5 +1,13 @@
 // src/mixins.js
 let globalMixins = {
+  // clearfix
+  clearfix: {
+    '&::after': {
+      'content': '""',
+      'display': 'table',
+      'clear': 'both'
+    }
+  },
   /* media query mixin  */
   media(mixin, breakpoint) {
     let media = '';

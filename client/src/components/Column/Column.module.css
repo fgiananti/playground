@@ -1,0 +1,13 @@
+/* [class^='col'] */
+
+.col {
+  float: left;
+  &:not(:last-child) {
+    margin-right: $gutterhorizontal;
+  }
+
+}
+
+.col1of2 {
+  width: calc((100% - $gutterhorizontal) / 2);
+}
