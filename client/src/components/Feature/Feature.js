@@ -1,6 +1,6 @@
 import React from "react";
 import classnames from "classnames";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 
 //modules
 import styles from "./Feature.module.css";
@@ -15,7 +15,7 @@ import rain from './rain.svg';
 //   MEDIUM: "medium"
 // };
 
-export const Feature = ({label, children}) => {
+export const Feature = ({title, label, children}) => {
   const classes = classnames(styles.feature);
 
   const img = {
@@ -27,10 +27,9 @@ export const Feature = ({label, children}) => {
     <div className={classes}>
       <img src={img.imgUrl} alt={img.imgAlt} className={styles.logo}/>
       <div className={styles.text}>
-        <h3 className={styles.title}>We’ll Watch the Weather</h3>
+        <h3 className={styles.title}>{title}</h3>
         <p>{text}</p>
       </div>
-
     </div>
 
     // <a href="#contacts" className={classes}>

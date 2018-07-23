@@ -1,0 +1,25 @@
+.row {
+  max-width: 75rem;
+  margin: 0 auto;
+
+  &:not(:last-child) {
+    margin-bottom: $guttervertical;
+  }
+
+  @mixin clearfix;
+}
+
+.testimonial {
+  /* background-color: black; */
+  background: url('./assets/testimonials-bg.jpg') top center
+    no-repeat;
+  background-size: cover;
+}
+
+.default {
+  background-color: color(black a(10%));
+}
+
+.mainBlue {
+  background-color: $mainBlue;
+}

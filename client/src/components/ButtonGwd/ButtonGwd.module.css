@@ -1,8 +1,13 @@
 .button {
-  text-decoration: none;
-  color: white;
-  display: inline-block;
-  padding: 1rem 1.2rem;
+
+  &:link,
+  &:visited {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 1.2rem 1.9rem;
+  }
+
 }
 
 .blue {

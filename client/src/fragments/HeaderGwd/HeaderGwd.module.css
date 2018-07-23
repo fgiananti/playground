@@ -1,0 +1,49 @@
+.header {
+  position: absolute;
+  width: 100%;
+  background-color: color($mainBlue a(30%));
+  padding: 1rem;
+  @mixin clearfix;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: auto;
+  display: inline-block;
+  background-color: $mainBlue;
+  padding: 2.5rem 3.6rem;
+}
+
+.nav {
+  display: inline-block;
+  float: right;
+  height: 100%;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+    display: inline-block;
+    padding: 1.2rem 2rem 1.2rem 0;
+  }
+
+  /* li:last-child {
+    padding-right: 2rem;
+  } */
+
+  a {
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-decoration: none;
+    color: white;
+    display: block;
+  }
+}
+
+.btncontainer {
+  float: right;
+}

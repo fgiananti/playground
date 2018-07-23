@@ -1,18 +1,21 @@
 .feature {
   display: flex;
+  color: white;
 }
 
 .logo {
   align-self: flex-start;
 }
 
-.text {
-  margin-left: 2rem;
-}
-
 .title {
+  font-size: 3rem;
+  font-weight: 300;
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 3rem;
-  font-weight: 400;
+}
+
+.text {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-left: 2rem;
 }
