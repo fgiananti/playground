@@ -9,8 +9,14 @@ import styles from './HeaderGwd.module.css';
 import logo from './assets/clear-view-escapes.svg';
 
 // ({buttonType, props})
-export const HeaderGwd = props => {
+export const HeaderGwd = ({ links }) => {
   const classes = classnames(styles.header);
+
+  const linksMarkup = links.map((link, index) => {
+    return (
+      <li key={index}><a href={link.link}>{link.label}</a></li>
+    )
+  })
 
   return (
     <header className={classes}>
@@ -21,9 +27,7 @@ export const HeaderGwd = props => {
         </div>
         <nav className={styles.nav}>
           <ul>
-            <li><a href="#our-beginning">Our Beginning</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
+            {linksMarkup}
           </ul>
         </nav>
       </Wrapper>

@@ -17,13 +17,17 @@ class MenuNat extends Component {
   }
 
   render() {
+    const menuLinks = this.props.links;
     return (
       <div>
         <label className={styles.label} onClick={this.handleClick}>
           <Icon toggleMenu={this.state.toggleMenu} />
         </label>
         <Background toggleMenu={this.state.toggleMenu} />
-        <Menu toggleMenu={this.state.toggleMenu} />
+        <Menu
+          toggleMenu={this.state.toggleMenu}
+          links={menuLinks}
+          />
       </div>
     )
   }
@@ -50,26 +54,24 @@ const Background = ({ toggleMenu }) => {
   )
 }
 
-const Menu = ({ toggleMenu }) => {
+const Menu = ({ toggleMenu, links }) => {
   const classes = classnames(
     styles.menu,
     styles[toggleMenu ? 'showMenu' : '']
   )
+
+  const linksMarkup = links.map((link, index) => {
+    return (
+      <li key={index} className={styles.item}>
+        <a href={link.link} className={styles.link}>
+          <span>0{index + 1}</span> {link.label}</a>
+      </li>
+    )
+  })
   return (
     <nav className={classes}>
       <ul className={styles.list}>
-        <li className={styles.item}>
-          <a href="#about" className={styles.link}>
-            <span>01</span> About</a>
-        </li>
-        <li className={styles.item}>
-          <a href="#contacs" className={styles.link}>
-            <span>02</span> Contacts</a>
-        </li>
-        <li className={styles.item}>
-          <a href="#followme" className={styles.link}>
-            <span>03</span> Follow me</a>
-        </li>
+        {linksMarkup}
       </ul>
     </nav>
   )

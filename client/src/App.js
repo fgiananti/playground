@@ -6,6 +6,8 @@ import Feature from './components/Feature';
 import Testimonial from './components/Testimonial';
 import ButtonNat1 from './components/ButtonNat1';
 import MenuNat from './components/MenuNat';
+import CompNat from './components/CompNat';
+
 // fragments
 import HeaderGwd from './fragments/HeaderGwd';
 import HeroGwd from './fragments/HeroGwd';
@@ -20,11 +22,28 @@ import styles from './App.module.css';
 
 class App extends Component {
   render() {
+    const headerLinks = [
+      {label: 'Our Beginning' , link: '#beginning' },
+      {label: 'Features' , link: '#features' },
+      {label: 'Testimonials' , link: '#testimonials' }
+    ];
+
+    const menuLinks = [
+      {label: 'about' , link: '#about' },
+      {label: 'contacts' , link: '#contacts' },
+      {label: 'skills' , link: '#skills' },
+      {label: 'testimonials' , link: '#testimonials' }
+    ];
+
     return (
       <div>
-        <HeaderGwd />
+        <HeaderGwd links={headerLinks} />
         <HeroGwd />
-        <MenuNat />
+        <MenuNat links={menuLinks} />
+
+        <Row theme="mainBlue">
+          <CompNat />
+        </Row>
 
         <Row theme="mainBlue">
           <Column type="col1of2">
