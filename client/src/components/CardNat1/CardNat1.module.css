@@ -1,0 +1,27 @@
+@import './assets/icon-font.css';
+
+.card {
+  background-color: color(white a(80%));
+  border-radius: 5px;
+  text-align: center;
+  padding: 2.5rem 1px 2.5rem 1px;
+  color: $mainBlue;
+  transition: transform .3s;
+  box-shadow: 0 1.5rem 4rem color(black a(15%));
+
+  &:hover {
+    transform: translateY(-1.5rem) scale(1.03);
+  }
+}
+
+.icon {
+  font-size: 6rem;
+  /* background-image: linear-gradient(to right, $mainBlue, $mainBlue);
+  -webkit-background-clip: text; */
+  color: $mainBlue;
+}
+
+.title {
+  text-transform: uppercase;
+  color: $mainBlue;
+}

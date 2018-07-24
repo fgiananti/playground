@@ -7,6 +7,7 @@ import Testimonial from './components/Testimonial';
 import ButtonNat1 from './components/ButtonNat1';
 import MenuNat from './components/MenuNat';
 import CompNat from './components/CompNat';
+import CardNat1 from './components/CardNat1';
 
 // fragments
 import HeaderGwd from './fragments/HeaderGwd';
@@ -35,11 +36,41 @@ class App extends Component {
       {label: 'testimonials' , link: '#testimonials' }
     ];
 
+    const cardNats = [
+      {icon: 'icon-basic-world', title: 'explore the world', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur'},
+      {icon: 'icon-basic-compass', title: 'meet nature', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur'},
+      {icon: 'icon-basic-map', title: 'find your way', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur'}
+    ]
+
     return (
       <div>
         <HeaderGwd links={headerLinks} />
         <HeroGwd />
         <MenuNat links={menuLinks} />
+
+        <Row theme="mainBlue">
+          <Column type="col1of3">
+            <CardNat1
+              icon='icon-basic-world'
+              title='explore the world'
+              text='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur'
+               />
+          </Column>
+          <Column type="col1of3">
+            <CardNat1
+              icon='icon-basic-compass'
+              title='meet nature'
+              text='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur'
+              />
+          </Column>
+          <Column type="col1of3">
+            <CardNat1
+              icon='icon-basic-map'
+              title='find your way'
+              text='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur'
+              />
+          </Column>
+        </Row>
 
         <Row theme="mainBlue">
           <CompNat />

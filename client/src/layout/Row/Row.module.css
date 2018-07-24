@@ -1,6 +1,7 @@
 .row {
-  max-width: 75rem;
+  max-width: 90rem;
   margin: 0 auto;
+  padding: 1.8rem;
 
   &:not(:last-child) {
     margin-bottom: $guttervertical;

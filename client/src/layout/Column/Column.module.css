@@ -11,3 +11,11 @@
 .col1of2 {
   width: calc((100% - $gutterhorizontal) / 2);
 }
+
+.col1of3 {
+  width: calc((100% - $gutterhorizontal*2) / 3);
+}
+
+.col1of4 {
+  width: calc((100% - $gutterhorizontal*3) / 4);
+}
