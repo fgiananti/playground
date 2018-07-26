@@ -3,11 +3,11 @@ import classnames from 'classnames';
 
 import styles from './ButtonNat1.module.css';
 
-export const ButtonNat1 = ({ href, children, label}) => {
+export const ButtonNat1 = ({ href, children, label, globalC}) => {
   const text = children || label;
   const classes = classnames(
     styles.button,
-    "moveInBottom"
+    globalC
   );
 
   return (
