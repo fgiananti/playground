@@ -9,6 +9,7 @@ import MenuNat from './components/MenuNat';
 import CompNat from './components/CompNat';
 import CardNat1 from './components/CardNat1';
 import CardNat2 from './components/CardNat2';
+import CardNat3 from './components/CardNat3';
 
 // fragments
 import HeaderGwd from './fragments/HeaderGwd';
@@ -49,35 +50,44 @@ class App extends Component {
         <HeroGwd />
         <MenuNat links={menuLinks} />
 
-          <Row>
-            <Column type="col1of3">
-              <CardNat2 title="the sea explorer" picture="picture1">
-                <li>3 day tours</li>
-                <li>Up to 30 people</li>
-                <li>2 tour guides</li>
-                <li>Sleep in cozy hotels</li>
-                <li>Difficulty: easy</li>
-              </CardNat2>
-            </Column>
-            <Column type="col1of3">
-              <CardNat2 title="the forest hiker" picture="picture2">
-                <li>7 day tours</li>
-                <li>Up to 40 people</li>
-                <li>6 tour guides</li>
-                <li>Sleep in provided tents</li>
-                <li>Difficulty: medium</li>
-              </CardNat2>
-            </Column>
-            <Column type="col1of3">
-              <CardNat2 title="the snow advenurer" picture="picture3">
-                <li>5 day tours</li>
-                <li>Up to 15 people</li>
-                <li>3 tour guides</li>
-                <li>Sleep in provided tents</li>
-                <li>Difficulty: hard</li>
-              </CardNat2>
-            </Column>
-          </Row>
+        <Row>
+          <CardNat3 caption="mary smith" picture="img1">
+            <h4>i had the best week ever with my family</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatu. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur</p>
+          </CardNat3>
+          <CardNat3 caption="jack wilson" picture="img2">
+            <h4>wow! my life is completely different now!</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatu. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur</p>
+          </CardNat3>
+        </Row>
+
+        <Row>
+          <Column type="col1of3">
+            <CardNat2 title="the sea explorer" picture="picture1">
+              <li>3 day tours</li>
+              <li>Up to 30 people</li>
+              <li>2 tour guides</li>
+              <li>Sleep in cozy hotels</li>
+              <li>Difficulty: easy</li>
+            </CardNat2>
+          </Column>
+          <Column type="col1of3">
+            <CardNat2 title="the forest hiker" picture="picture2">
+              <li>7 day tours</li>
+              <li>Up to 40 people</li>
+              <li>6 tour guides</li>
+              <li>Sleep in provided tents</li>                <li>Difficulty: medium</li>
+            </CardNat2>
+          </Column>
+          <Column type="col1of3">
+            <CardNat2 title="the snow advenurer" picture="picture3">
+              <li>5 day tours</li>
+              <li>Up to 15 people</li>
+              <li>3 tour guides</li>
+              <li>Sleep in provided tents</li>                <li>Difficulty: hard</li>
+            </CardNat2>
+          </Column>
+        </Row>
 
         <Row theme="mainBlue">
           <Column type="col1of3">
