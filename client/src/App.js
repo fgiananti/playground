@@ -10,6 +10,8 @@ import CompNat from './components/CompNat';
 import CardNat1 from './components/CardNat1';
 import CardNat2 from './components/CardNat2';
 import CardNat3 from './components/CardNat3';
+import FilterableProductTable from './components/FilterableProductTable';
+import BoilingCalc from './components/BoilingCalc';
 
 // fragments
 import HeaderGwd from './fragments/HeaderGwd';
@@ -42,13 +44,30 @@ class App extends Component {
       {icon: 'icon-basic-world', title: 'explore the world', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur'},
       {icon: 'icon-basic-compass', title: 'meet nature', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur'},
       {icon: 'icon-basic-map', title: 'find your way', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur'}
-    ]
+    ];
+
+    const PRODUCTS = [
+      {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
+      {category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball'},
+      {category: 'Sporting Goods', price: '$29.99', stocked: false, name: 'Basketball'},
+      {category: 'Electronics', price: '$99.99', stocked: true, name: 'iPod Touch'},
+      {category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5'},
+      {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
+    ];
 
     return (
       <div>
         <HeaderGwd links={headerLinks} />
         <HeroGwd />
         <MenuNat links={menuLinks} />
+
+        <Row>
+          <BoilingCalc />
+        </Row>
+
+        <Row>
+          <FilterableProductTable products={PRODUCTS} />
+        </Row>
 
         <Row>
           <CardNat3 caption="mary smith" picture="img1">
