@@ -12,6 +12,7 @@ import CardNat2 from './components/CardNat2';
 import CardNat3 from './components/CardNat3';
 import FilterableProductTable from './components/FilterableProductTable';
 import BoilingCalc from './components/BoilingCalc';
+import TicTacToe from './components/TicTacToe';
 
 // fragments
 import HeaderGwd from './fragments/HeaderGwd';
@@ -60,6 +61,10 @@ class App extends Component {
         <HeaderGwd links={headerLinks} />
         <HeroGwd />
         <MenuNat links={menuLinks} />
+
+        <Row>
+          <TicTacToe />
+        </Row>
 
         <Row>
           <BoilingCalc />
